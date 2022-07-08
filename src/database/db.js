@@ -1,9 +1,7 @@
 import mongoose from 'mongoose';
-const uri = 'mongodb://localhost:27017/db_api_rick_and_morty';
-
 export const connectToDatabase = () => {
   mongoose
-    .connect(uri, {
+    .connect(process.env.URI_DATABASE, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
