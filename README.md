@@ -20,7 +20,7 @@ MongoDB Atlas
 Para iniciarmos será necessário abrir o terminal no caminho correto da pasta do projeto.
 Com o terminal aberto digite o comando: npm i express cors mongoose dotenv (estas são as dependências utilizadas no projeto)
 ```
-Exemplo: PS C:\Users\Matheus\OneDrive\Documentos\Blue\Módulo 3\Projeto 0"\Projeto-3---M-dulo-3> npm i express cors mongoose dotenv
+Exemplo: PS C:\Users\Matheus\OneDrive\Documentos\Blue\Módulo 3\Projeto 03\Projeto-3---M-dulo-3> npm i express cors mongoose dotenv
 ```
 
 Agora você deve digitar em seu terminal: npm run dev (isso irá startar seu servidor para execução do projeto)
