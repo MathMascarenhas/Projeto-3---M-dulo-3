@@ -26,17 +26,17 @@ export const validCreate = async (req, res, next) => {
 };
 
 export const validUpdate = async (req, res, next) => {
-  const characterUpdate = req.body;
+  const { name, imageUrl } = req.body;
   const idParam = req.params.id;
-  if (!characterUpdate.name || !characterUpdate.imageUrl) {
+  if (!name || !imageUrl) {
     return res
       .status(400)
       .send({ message: 'Por favor preencher todos os campos!' });
   }
   const characterUnupdated = await Characters.findById(idParam);
   if (
-    characterUpdate.name === characterUnupdated.name &&
-    characterUpdate.imageUrl === characterUnupdated.imageUrl
+    name === characterUnupdated.name &&
+    imageUrl === characterUnupdated.imageUrl
   ) {
     return res.status(400).send({ message: 'Por favor altere um dos campos' });
   }

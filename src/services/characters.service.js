@@ -7,9 +7,10 @@ export const findCharacterById = async (idParam) => await Characters.findById(id
 export const createCharacter = async (newCharacter) => await Characters.create(newCharacter);
 
 export const updateCharacter = async (idParam, characterUpdate) => {
-  return await Characters.findByIdAndUpdate(idParam, characterUpdate).setOptions({
-    returnOriginal: false
+  return await Characters.findByIdAndUpdate(idParam, characterUpdate)
+  .setOptions({
+    returnOriginal: false,
   });
 };
 
-export const deleteCharacter = async (idParam) => await Characters.findByIdAndDelete(idParam);
+export const deleteCharacter = async (idParam) =>  await Characters.findByIdAndDelete(idParam);

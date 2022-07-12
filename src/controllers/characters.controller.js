@@ -9,7 +9,7 @@ import {
 export const findAll = async (req, res) => {
   const allCharacters = await findAllCharacters();
   if (allCharacters.length === 0) {
-    return res.status(404).send({ message: 'Nenhum personagem encontrado' });
+    return res.status(200).send({ message: 'Nenhum personagem encontrado' });
   }
   res.send(allCharacters);
 };
